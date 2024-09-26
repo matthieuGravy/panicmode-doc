@@ -19,7 +19,7 @@ contentElement.id = "content";
 rootElement.appendChild(contentElement);
 
 async function loadJsonData(url: string) {
-  const response = await fetch(url);
+  const response = await fetch(new URL(url, import.meta.url).href);
   if (!response.ok) {
     throw new Error(`Failed to load JSON data from ${url}`);
   }

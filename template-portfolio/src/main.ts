@@ -9,6 +9,9 @@ import { PanicHeader } from "panicmode";
 // Import for example the PanicJumbo component
 import { PanicJumbo } from "panicmode";
 
+// Function to load JSON data from a URL
+import { loadJsonData } from "@/utils/loadJsonData.ts";
+
 const rootElement = document.getElementById("app");
 if (!rootElement) throw new Error("Root element not found");
 
@@ -25,21 +28,12 @@ const contentElement = document.createElement("div");
 contentElement.id = "content";
 rootElement.appendChild(contentElement);
 
-// Function to load JSON data from a URL
-async function loadJsonData(url: string) {
-  const response = await fetch(url);
-  if (!response.ok) {
-    throw new Error(`Failed to load JSON data from ${url}`);
-  }
-  return await response.json();
-}
-
 // Add a route for the home page, this route update the header and content
 router.addRoute(
   "/",
   async () => {
     try {
-      const data = await loadJsonData("src/content/home.json");
+      const data = await loadJsonData("home.json");
 
       const panicJumbo = new PanicJumbo(
         data.panicJumbo.title,
@@ -66,7 +60,7 @@ router.addRoute(
   "/about",
   async () => {
     try {
-      const data = await loadJsonData("src/content/about.json");
+      const data = await loadJsonData("about.json");
 
       const aboutJumbo = new PanicJumbo(
         data.panicJumbo.title,
