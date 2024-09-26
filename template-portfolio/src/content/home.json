@@ -1,0 +1,13 @@
+{
+    "panicJumbo": {
+      "title": "Hello World",
+      "titleTag": "h2",
+      "contentTag": "p",
+      "content": "I am Matthieu, a junior developer based in Brussels. I am passionate about web development.",
+      "buttonText": "About Me",
+      "buttonTag": "a",
+      "buttonClass": "primary",
+      "buttonLinkText": "Go to About",
+      "buttonLink": "/about"
+    }
+}

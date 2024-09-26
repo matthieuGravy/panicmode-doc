@@ -1,0 +1,24 @@
+{
+    "panicJumbo": {
+      "title": "PanicMode: Actively under development",
+      "titleTag": "h2",
+      "contentTag": "p",
+      "content": "Your future ally for efficient static site creation. We're building this together, making web dev more accessible for everyone.",
+      "buttonText": "Get Started",
+      "buttonTag": "a",
+      "buttonClass": "primary",
+      "buttonLinkText": "About PanicMode",
+      "buttonLink": "/docs"
+    },
+    "panicCard": {
+      "title": "Panic Card",
+      "content": "This is a panic card",
+      "imageSrc": "/vite.svg",
+      "imageAlt": "PanicMode logo",
+      "buttonText": "View Details",
+      "buttonLink": "/contact",
+      "buttonClass": "primary"
+    }
+  }
+
+  
