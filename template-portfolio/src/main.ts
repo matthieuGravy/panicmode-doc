@@ -9,6 +9,9 @@ import { PanicHeader } from "panicmode";
 // Import for example the PanicJumbo component
 import { PanicJumbo } from "panicmode";
 
+// Import the head function to update the title of the page
+import { updateHeadPanic } from "panicmode";
+
 // Function to load JSON data from a URL
 import { loadJsonData } from "@/utils/loadJsonData.ts";
 
@@ -33,6 +36,11 @@ router.addRoute(
   "/",
   async () => {
     try {
+      updateHeadPanic(
+        "MG | Home",
+        "You can use this to describe your page",
+        "/typescript.svg"
+      );
       const data = await loadJsonData("home.json");
 
       const panicJumbo = new PanicJumbo(
@@ -60,6 +68,11 @@ router.addRoute(
   "/about",
   async () => {
     try {
+      updateHeadPanic(
+        "MG | About",
+        "You can use this to describe your page",
+        "/vite.svg"
+      );
       const data = await loadJsonData("about.json");
 
       const aboutJumbo = new PanicJumbo(
