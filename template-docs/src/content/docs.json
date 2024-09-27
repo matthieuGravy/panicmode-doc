@@ -1,0 +1,12 @@
+{
+    "panicJumbo": {
+        "title": "About Me",
+        "titleTag": "h2",
+        "contentTag": "p",
+        "content": "Passionate developer with expertise in creating innovative websites and applications. I strive to combine creativity and functionality in every project.",
+      "buttonText": "show me more",
+      "buttonTag": "button",
+      "buttonClass": "secondary",
+      "buttonLinkText": "this is a button with onClick event"
+    }
+}

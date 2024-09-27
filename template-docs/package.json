@@ -1,5 +1,5 @@
 {
-  "name": "test-1",
+  "name": "template-docs",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -9,14 +9,12 @@
     "preview": "vite preview"
   },
   "devDependencies": {
-    "autoprefixer": "^10.4.20",
-    "daisyui": "^4.12.10",
-    "postcss": "^8.4.47",
-    "tailwindcss": "^3.4.13",
-    "typescript": "^5.6.2",
-    "vite": "^5.4.8"
+    "typescript": "^5.5.3",
+    "vite": "^5.4.1"
   },
   "dependencies": {
-    "panicmode": "^0.2.4"
+    "panicmode": "^0.2.4",
+    "path": "^0.12.7",
+    "url": "^0.11.4"
   }
 }

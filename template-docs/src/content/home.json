@@ -1,0 +1,13 @@
+{
+    "panicJumbo": {
+      "title": "PanicMode",
+      "titleTag": "h2",
+      "contentTag": "p",
+      "content": "Welcome to the docs (Don't worry, we'll get through this together!)",
+      "buttonText": "Get Started",
+      "buttonTag": "a",
+      "buttonClass": "primary",
+      "buttonLinkText": "Press the button and go to docs",
+      "buttonLink": "/docs"
+    }
+}

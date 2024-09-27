@@ -3,14 +3,12 @@ import "./style.css";
 import "panicmode/dist/panicmode.css";
 
 // Import the PanicRouter, PanicHeader they work together
-import { PanicRouter } from "panicmode";
-import { PanicHeader } from "panicmode";
-
-// Import for example the PanicJumbo component
-import { PanicJumbo } from "panicmode";
-
-// Import the head function to update the title of the page
-import { updateHeadPanic } from "panicmode";
+import {
+  PanicRouter,
+  PanicHeader,
+  PanicJumbo,
+  updateHeadPanic,
+} from "panicmode";
 
 // Function to load JSON data from a URL
 import { loadJsonData } from "@/utils/loadJsonData.ts";
@@ -19,7 +17,7 @@ const rootElement = document.getElementById("app");
 if (!rootElement) throw new Error("Root element not found");
 
 // Add a link to the header to navigate back to the home page
-const header = new PanicHeader("<a href='/'>Matthieu Gravy</a>");
+const header = new PanicHeader("<a href='/'>PanicMode</a>");
 // Create a new PanicRouter instance
 const router = new PanicRouter(rootElement, header);
 
@@ -37,11 +35,7 @@ router.addRoute(
   async () => {
     try {
       // Update the title of the page
-      updateHeadPanic(
-        "MG | Home",
-        "You can use this to describe your page",
-        "/typescript.svg"
-      );
+      updateHeadPanic("PanicMode | Home", "", "/typescript.svg");
       const data = await loadJsonData("home.json");
 
       const panicJumbo = new PanicJumbo(
@@ -66,15 +60,15 @@ router.addRoute(
 );
 
 router.addRoute(
-  "/about",
+  "/docs",
   async () => {
     try {
       updateHeadPanic(
-        "MG | About",
+        "PanicMode | Docs",
         "You can use this to describe your page",
         "/vite.svg"
       );
-      const data = await loadJsonData("about.json");
+      const data = await loadJsonData("docs.json");
 
       const aboutJumbo = new PanicJumbo(
         data.panicJumbo.title,
@@ -97,7 +91,7 @@ router.addRoute(
       console.error("Error loading JSON data:", error);
     }
   },
-  "About"
+  "Docs"
 );
 
 // Do not forget to call render to render the current route
